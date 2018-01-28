@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6EA99A4E-085C-4EC6-B178-A770330DF472}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PROMPT</RootNamespace>
+    <AssemblyName>PROMPT</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\cls_Excel_Import_Export.cs" />
+    <Compile Include="Controller\frmAddCallController.cs" />
+    <Compile Include="Controller\frmAddCustomerController.cs" />
+    <Compile Include="Controller\frmAddProductController.cs" />
+    <Compile Include="Controller\frmBrandMasterController.cs" />
+    <Compile Include="Controller\frmCalllistCotroller.cs" />
+    <Compile Include="Controller\frmCapacityMasterController.cs" />
+    <Compile Include="Controller\frmCustomerTypeController.cs" />
+    <Compile Include="Controller\frmEngineerCotroller.cs" />
+    <Compile Include="Controller\frmListofCustomerController.cs" />
+    <Compile Include="Controller\frmLocationController.cs" />
+    <Compile Include="Controller\frmLoginController.cs" />
+    <Compile Include="Controller\frmProductMasterController.cs" />
+    <Compile Include="frmResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResetPassword.Designer.cs">
+      <DependentUpon>frmResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\frmAddCallModel.cs" />
+    <Compile Include="Model\frmAddCustomerModel.cs" />
+    <Compile Include="Model\frmAddProductModel.cs" />
+    <Compile Include="Model\frmBrandMasterModel.cs" />
+    <Compile Include="Model\frmCalllistModel.cs" />
+    <Compile Include="Model\frmCapacityMasterModel.cs" />
+    <Compile Include="Model\frmCustomerTypeModel.cs" />
+    <Compile Include="Model\frmEngineerModel.cs" />
+    <Compile Include="Model\frmListofCustomerMode.cs" />
+    <Compile Include="Model\frmLocationModel.cs" />
+    <Compile Include="Model\frmLoginModel.cs" />
+    <Compile Include="Model\frmProductMastertModel.cs" />
+    <Compile Include="ViewCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewCall.Designer.cs">
+      <DependentUpon>ViewCall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmActivation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmActivation.Designer.cs">
+      <DependentUpon>frmActivation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAMCDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAMCDetails.Designer.cs">
+      <DependentUpon>frmAMCDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCallList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCallList.Designer.cs">
+      <DependentUpon>frmCallList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReasonMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReasonMaster.Designer.cs">
+      <DependentUpon>frmReasonMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTaxDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTaxDetails.Designer.cs">
+      <DependentUpon>frmTaxDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThirdPartyMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThirdPartyMaster.Designer.cs">
+      <DependentUpon>frmThirdPartyMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddCall.Designer.cs">
+      <DependentUpon>frmAddCall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCapacityMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCapacityMaster.Designer.cs">
+      <DependentUpon>frmCapacityMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBrandMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBrandMaster.Designer.cs">
+      <DependentUpon>frmBrandMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEngineerMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEngineerMaster.Designer.cs">
+      <DependentUpon>frmEngineerMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListOfProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListOfProduct.Designer.cs">
+      <DependentUpon>frmListOfProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductMaster.Designer.cs">
+      <DependentUpon>frmProductMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomerTypeMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerTypeMaster.Designer.cs">
+      <DependentUpon>frmCustomerTypeMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database.cs" />
+    <Compile Include="frmAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddCustomer.Designer.cs">
+      <DependentUpon>frmAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddProduct.Designer.cs">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListofCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListofCustomer.Designer.cs">
+      <DependentUpon>frmListofCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLocationMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocationMaster.Designer.cs">
+      <DependentUpon>frmLocationMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMDI.Designer.cs">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmResetPassword.resx">
+      <DependentUpon>frmResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCall.resx">
+      <DependentUpon>ViewCall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmActivation.resx">
+      <DependentUpon>frmActivation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAMCDetails.resx">
+      <DependentUpon>frmAMCDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddCall.resx">
+      <DependentUpon>frmAddCall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCallList.resx">
+      <DependentUpon>frmCallList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCapacityMaster.resx">
+      <DependentUpon>frmCapacityMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBrandMaster.resx">
+      <DependentUpon>frmBrandMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEngineerMaster.resx">
+      <DependentUpon>frmEngineerMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListOfProduct.resx">
+      <DependentUpon>frmListOfProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductMaster.resx">
+      <DependentUpon>frmProductMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomerTypeMaster.resx">
+      <DependentUpon>frmCustomerTypeMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddCustomer.resx">
+      <DependentUpon>frmAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddProduct.resx">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListofCustomer.resx">
+      <DependentUpon>frmListofCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLocationMaster.resx">
+      <DependentUpon>frmLocationMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMDI.resx">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReasonMaster.resx">
+      <DependentUpon>frmReasonMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTaxDetails.resx">
+      <DependentUpon>frmTaxDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThirdPartyMaster.resx">
+      <DependentUpon>frmThirdPartyMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Controller\Open Notebook.onetoc2" />
+    <None Include="Model\Open Notebook.onetoc2" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\Open Notebook.onetoc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\LoginRed.jpg" />
+    <Content Include="Resources\software1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
