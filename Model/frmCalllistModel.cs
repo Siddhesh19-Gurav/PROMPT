@@ -12,5 +12,9 @@ namespace PROMPT.Model
         public string CustmoerName { get; set; }
         public string CustId { get; set; }
         public string Status { get; set; }
+
+        public string fromDate { get; set; }
+
+        public string ToDate { get; set; }
     }
 }

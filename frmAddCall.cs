@@ -119,17 +119,17 @@ namespace PROMPT
                 txtPaidAmount.Text = callDetails.Rows[0]["PaidAmount"].ToString();
                 cmbCallStatus.SelectedIndex = Convert.ToInt32(callDetails.Rows[0]["CallStatus"].ToString());
                 dtpCallCompleteDate.Text = Convert.ToDateTime(callDetails.Rows[0]["CallCompleteDate"].ToString()).ToString("dd/MM/yyyy");
-                //int i = 0;
-                //foreach (DataRowView Value in cmbEngineerName.Items)
-                //{
-                //    if (Value[0].ToString() == callDetails.Rows[0]["EngineerID"].ToString())
-                //    {
-                //        cmbEngineerName.SelectedIndex = i;
-                //        break;
-                //    }
-                //    i++;
-                //}
                 i = 0;
+                foreach (DataRowView Value in cmbEngineerName.Items)
+                {
+                    if (Value[0].ToString() == callDetails.Rows[0]["EngineerID"].ToString())
+                    {
+                        cmbEngineerName.SelectedIndex = i;
+                        break;
+                    }
+                    i++;
+                }
+                //i = 0;
                 foreach (DataRowView Value in cmbComplaint.Items)
                 {
                     if (Value[0].ToString() == callDetails.Rows[0]["ReasonCode"].ToString())

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvCallList = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbCallStatus = new System.Windows.Forms.ComboBox();
@@ -47,6 +47,10 @@
             this.btnExport = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbThirdParty = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dtpFromDate = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dtpToDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCallList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerName)).BeginInit();
             this.cmsRightClickMenu.SuspendLayout();
@@ -57,29 +61,29 @@
             this.dgvCallList.AllowUserToAddRows = false;
             this.dgvCallList.AllowUserToDeleteRows = false;
             this.dgvCallList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCallList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCallList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCallList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCallList.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvCallList.Location = new System.Drawing.Point(12, 95);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCallList.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvCallList.Location = new System.Drawing.Point(12, 142);
             this.dgvCallList.MultiSelect = false;
             this.dgvCallList.Name = "dgvCallList";
             this.dgvCallList.ReadOnly = true;
             this.dgvCallList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCallList.Size = new System.Drawing.Size(1095, 397);
+            this.dgvCallList.Size = new System.Drawing.Size(1095, 350);
             this.dgvCallList.TabIndex = 0;
             this.dgvCallList.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCallList_CellContentDoubleClick);
             this.dgvCallList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCallList_CellDoubleClick);
@@ -89,11 +93,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 67);
+            this.label1.Location = new System.Drawing.Point(67, 109);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 14);
+            this.label1.Size = new System.Drawing.Size(57, 14);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Status";
+            this.label1.Text = "Status :";
             // 
             // cmbCallStatus
             // 
@@ -104,7 +108,7 @@
             "All",
             "Pending",
             "Completed"});
-            this.cmbCallStatus.Location = new System.Drawing.Point(66, 64);
+            this.cmbCallStatus.Location = new System.Drawing.Point(130, 106);
             this.cmbCallStatus.Name = "cmbCallStatus";
             this.cmbCallStatus.Size = new System.Drawing.Size(131, 22);
             this.cmbCallStatus.TabIndex = 2;
@@ -113,7 +117,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 24);
+            this.label2.Location = new System.Drawing.Point(12, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 14);
             this.label2.TabIndex = 6;
@@ -128,7 +132,7 @@
             "All",
             "Pending",
             "Completed"});
-            this.cmbEngineerID.Location = new System.Drawing.Point(130, 21);
+            this.cmbEngineerID.Location = new System.Drawing.Point(130, 63);
             this.cmbEngineerID.Name = "cmbEngineerID";
             this.cmbEngineerID.Size = new System.Drawing.Size(131, 22);
             this.cmbEngineerID.TabIndex = 0;
@@ -137,7 +141,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(290, 64);
+            this.label3.Location = new System.Drawing.Point(290, 106);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(113, 14);
             this.label3.TabIndex = 8;
@@ -149,7 +153,7 @@
             this.dgvCustomerName.AllowUserToDeleteRows = false;
             this.dgvCustomerName.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCustomerName.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomerName.Location = new System.Drawing.Point(409, 85);
+            this.dgvCustomerName.Location = new System.Drawing.Point(409, 127);
             this.dgvCustomerName.MultiSelect = false;
             this.dgvCustomerName.Name = "dgvCustomerName";
             this.dgvCustomerName.ReadOnly = true;
@@ -162,7 +166,7 @@
             // txtCustomerName
             // 
             this.txtCustomerName.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerName.Location = new System.Drawing.Point(409, 61);
+            this.txtCustomerName.Location = new System.Drawing.Point(409, 103);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.Size = new System.Drawing.Size(438, 22);
             this.txtCustomerName.TabIndex = 1;
@@ -181,7 +185,7 @@
             // 
             // txtCustID
             // 
-            this.txtCustID.Location = new System.Drawing.Point(293, 85);
+            this.txtCustID.Location = new System.Drawing.Point(293, 127);
             this.txtCustID.Name = "txtCustID";
             this.txtCustID.Size = new System.Drawing.Size(100, 20);
             this.txtCustID.TabIndex = 12;
@@ -227,7 +231,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(309, 25);
+            this.label4.Location = new System.Drawing.Point(309, 67);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 14);
             this.label4.TabIndex = 13;
@@ -242,16 +246,56 @@
             "All",
             "Pending",
             "Completed"});
-            this.cmbThirdParty.Location = new System.Drawing.Point(409, 22);
+            this.cmbThirdParty.Location = new System.Drawing.Point(409, 64);
             this.cmbThirdParty.Name = "cmbThirdParty";
             this.cmbThirdParty.Size = new System.Drawing.Size(372, 22);
             this.cmbThirdParty.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(43, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 14);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "From Date :";
+            // 
+            // dtpFromDate
+            // 
+            this.dtpFromDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFromDate.Location = new System.Drawing.Point(131, 20);
+            this.dtpFromDate.Name = "dtpFromDate";
+            this.dtpFromDate.Size = new System.Drawing.Size(105, 20);
+            this.dtpFromDate.TabIndex = 16;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(242, 23);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(31, 14);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "To :";
+            // 
+            // dtpToDate
+            // 
+            this.dtpToDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpToDate.Location = new System.Drawing.Point(279, 20);
+            this.dtpToDate.Name = "dtpToDate";
+            this.dtpToDate.Size = new System.Drawing.Size(105, 20);
+            this.dtpToDate.TabIndex = 18;
             // 
             // frmCallList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1129, 504);
+            this.Controls.Add(this.dtpToDate);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.dtpFromDate);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.cmbThirdParty);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnExport);
@@ -297,5 +341,9 @@
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbThirdParty;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dtpFromDate;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dtpToDate;
     }
 }

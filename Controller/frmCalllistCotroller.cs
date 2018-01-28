@@ -51,6 +51,8 @@ namespace PROMPT.Controller
             {
 
                 DbCommand dbcommand = database.GetStoredPocCommand("SP_GetCallDetails");
+                database.AddInParameter(dbcommand, "@FromDate", DbType.String, model.fromDate);
+                database.AddInParameter(dbcommand, "@ToDate", DbType.String, model.ToDate);
                 dt = database.ExecuteDataTable(dbcommand);
                 return dt;
 

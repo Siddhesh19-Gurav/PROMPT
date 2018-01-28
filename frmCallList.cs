@@ -43,6 +43,8 @@ namespace PROMPT
                 model.CustId = "0";
                 model.EngineerId = 0;
                 model.Status = "0";
+                model.fromDate = dtpFromDate.Text;
+                model.ToDate = dtpToDate.Text;
                 dgvCallList.DataSource = controller.GetcallList(model);
                 dgvCallList.Columns[0].Visible = false;
                 dgvCallList.Columns[1].Visible = false;
@@ -71,6 +73,7 @@ namespace PROMPT
                         dgvCustomerName.Columns[3].Visible = false;
                         dgvCustomerName.Columns[4].Visible = false;
                         dgvCustomerName.Columns[5].Visible = false;
+                        dgvCustomerName.Columns[6].Visible = false;
                     }
                 }
                 else
@@ -127,6 +130,10 @@ namespace PROMPT
                 if (cmbThirdParty.SelectedIndex > 0)
                 {
                     Condition += " And th.ThirdPartyID='" + cmbThirdParty.SelectedValue + "'";
+                }
+                if (dtpFromDate.Text != "" && dtpToDate.Text != "")
+                {
+                    Condition += " And CONVERT(datetime,Calldate,103) between CONVERT(Datetime,'" + dtpFromDate.Text + "',103) and CONVERT(Datetime,'" + dtpFromDate.Text + "',103) ";
                 }
 
                 DbCommand dbcommand = database.GetSqlStringCommand("select CallLogId,a.CustomerId,a.ProductId,CONVERT(varchar,Calldate,103) as [Date],cust.CustomerName AS Name,re.Reason as 'Complaint',CallDescription as [Job Done],case when CallStatus=1 then 'Prening' when CallStatus=2 then 'Completed' end as [Status]," +
